@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asblurryvideos</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+
+        <div class="logo">
+            A trends
+        </div>
+
+        <nav>
+            <a href="#">Gallery</a>
+            <a class="active" href="#">Live Capture</a>
+            <a href="#">Memories</a>
+        </nav>
+
+        <div class="icons">
+    <span>◻</span>
+    <span id="musicBtn">🎵</span>
+</div>
+
+    </header>
+
+    <!-- MAIN -->
+    <div class="container">
+
+        <!-- SIDEBAR -->
+        <aside>
+
+            <h1>The Collector</h1>
+            <p>Preserving Moments</p>
+
+            <div class="menu active">
+                ● Live Capture
+            </div>
+
+            <button>
+                BY ASTREEDD
+            </button>
+
+        </aside>
+
+        <!-- CONTENT -->
+        <main>
+
+            <div class="frame">
+
+                <div class="live">
+                    ❤ LIVE
+                </div>
+
+                <h2>A Blurry Videos</h2>
+
+                <!-- Kamera nanti di sini -->
+                <div class="camera-box">
+
+                    <video id="video" autoplay playsinline></video>
+                    <canvas id="canvas"></canvas>
+                    <button class="capture">📷</button>
+
+                </div>
+
+                <div class="camera-info">
+
+                    <div>
+                        <small>Film Type</small>
+                        <b>Portra 400H</b>
+                    </div>
+
+                    <div>
+                        <small>Lens</small>
+                        <b>50mm f/1.4</b>
+                    </div>
+
+                    <div>
+                        <small>Shutter</small>
+                        <b>1/250s</b>
+                    </div>
+
+                    <div>
+                        <small>Aperture</small>
+                        <b>f/2.0</b>
+                    </div>
+
+                    <div>
+                        <small>ISO</small>
+                        <b>800</b>
+                    </div>
+
+                    <div>
+                        <small>Filter</small>
+                        <b>Romantic</b>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+<audio id="music" src="fotokitablur.mp3"></audio>
+
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>

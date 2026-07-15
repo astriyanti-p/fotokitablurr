@@ -1,0 +1,509 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#f6efef;
+    font-family:'Poppins',sans-serif;
+    color:#2b0c0c;
+
+}
+
+/* HEADER */
+
+header{
+
+    height:80px;
+    border-bottom:1px solid #bfa8a8;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 40px;
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:40px;
+    font-style:italic;
+
+}
+
+nav{
+
+    display:flex;
+    gap:40px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+    color:#5a3b3b;
+
+}
+
+nav .active{
+
+    border-bottom:2px solid #4a1515;
+    padding-bottom:8px;
+
+}
+
+.icons{
+
+    display:flex;
+    gap:20px;
+    font-size:22px;
+
+}
+
+/* LAYOUT */
+
+.container{
+
+    display:flex;
+    min-height:calc(100vh - 80px);
+
+}
+
+/* SIDEBAR */
+
+aside{
+
+    width:270px;
+    padding:60px 30px;
+
+    display:flex;
+    flex-direction:column;
+
+}
+
+aside h1{
+
+    font-family:'Cormorant Garamond',serif;
+    font-size:46px;
+
+}
+
+aside p{
+
+    color:#777;
+    margin-bottom:50px;
+
+}
+
+.menu{
+
+    padding:18px 20px;
+    background:#f3e8e8;
+    border-left:4px solid transparent;
+    cursor:pointer;
+
+}
+
+.menu.active{
+
+    border-left:4px solid #4d1414;
+    font-weight:600;
+
+}
+
+aside button{
+
+    margin-top:auto;
+
+    background:#430707;
+    color:white;
+
+    border:none;
+
+    height:52px;
+
+    cursor:pointer;
+
+    letter-spacing:2px;
+
+}
+
+/* CONTENT */
+
+main{
+
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* FRAME */
+
+.frame{
+
+    width:1000px;
+    background:#fffdf7;
+
+    border:3px solid #ead9ab;
+
+    border-radius:10px;
+
+    padding:30px;
+
+    position:relative;
+
+    box-shadow:0 0 25px rgba(0,0,0,.05);
+
+}
+
+.frame h2{
+
+    font-family:'Cormorant Garamond',serif;
+    text-align:center;
+    font-size:52px;
+    margin-bottom:20px;
+
+}
+
+.live{
+
+    position:absolute;
+
+    top:20px;
+    right:30px;
+
+    background:#ddd;
+
+    padding:8px 16px;
+
+    border-radius:20px;
+
+    font-size:13px;
+
+}
+
+/* CAMERA */
+
+.camera-box{
+
+    width:730px;
+    height:470px;
+
+    margin:auto;
+
+    border:1px solid #d8c7a0;
+
+    background:#f8f5ed;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+/* nanti video */
+
+.camera-box video{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+/* INFO */
+
+.camera-info{
+
+    display:flex;
+    justify-content:space-evenly;
+
+    margin-top:25px;
+
+    text-align:center;
+
+}
+
+.camera-info small{
+
+    color:#777;
+    display:block;
+
+}
+
+.camera-info b{
+
+    font-weight:500;
+
+}
+
+/* BUTTON */
+
+.capture{
+
+    position:absolute;
+
+    top:50%;
+    right:20px;
+
+    transform:translateY(-50%);
+
+    width:70px;
+    height:70px;
+
+    border:none;
+    border-radius:50%;
+
+    background:white;
+
+    font-size:28px;
+
+    cursor:pointer;
+
+    z-index:10;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
+
+    transition:.3s;
+
+}
+
+.capture:hover{
+
+    transform:translateY(-50%) scale(1.08);
+
+    box-shadow:0 15px 35px rgba(0,0,0,.25);
+
+}
+.camera-box{
+    width:100%;
+    height:600px;
+    position:relative;
+    overflow:hidden;
+    border-radius:20px;
+    background:black;
+}
+
+#video,
+#canvas{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+#video,
+    #canvas{
+    position:absolute;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transform:scaleX(-1);
+}
+
+#canvas{
+    pointer-events:none;
+}
+#video{
+    transition: filter .3s ease;
+}
+
+#canvas{
+    z-index:2;
+}
+
+#video{
+    z-index:1;
+}
+/* ===========================
+   RESPONSIVE TABLET
+=========================== */
+
+@media (max-width:1024px){
+
+.container{
+    flex-direction:column;
+}
+
+aside{
+    width:100%;
+    padding:30px 20px;
+}
+
+aside h1{
+    font-size:38px;
+}
+
+aside p{
+    margin-bottom:20px;
+}
+
+aside button{
+    margin-top:20px;
+}
+
+.frame{
+    width:100%;
+}
+
+.camera-box{
+    height:450px;
+}
+
+.camera-info{
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+}
+
+/* ===========================
+   RESPONSIVE HP
+=========================== */
+
+@media (max-width:768px){
+
+header{
+    padding:15px;
+    height:auto;
+    flex-direction:column;
+    gap:15px;
+}
+
+.logo{
+    font-size:32px;
+}
+
+nav{
+    gap:20px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.icons{
+    font-size:20px;
+}
+
+.container{
+    flex-direction:column;
+}
+
+aside{
+    width:100%;
+    padding:20px;
+    text-align:center;
+}
+
+aside h1{
+    font-size:34px;
+}
+
+aside p{
+    margin-bottom:15px;
+}
+
+.menu{
+    margin-bottom:15px;
+}
+
+aside button{
+    width:100%;
+    margin-top:15px;
+}
+
+main{
+    padding:15px;
+}
+
+.frame{
+    width:100%;
+    padding:15px;
+}
+
+.frame h2{
+    font-size:34px;
+    margin-bottom:15px;
+}
+
+.live{
+    top:15px;
+    right:15px;
+}
+
+.camera-box{
+    width:100%;
+    height:260px;
+    border-radius:15px;
+}
+
+.camera-info{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.camera-info small{
+    font-size:12px;
+}
+
+.camera-info b{
+    font-size:14px;
+}
+
+.capture{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    margin:0;
+    width:65px;
+    height:65px;
+    font-size:26px;
+    z-index:999;
+}
+
+}
+
+/* ===========================
+   HP KECIL
+=========================== */
+
+@media (max-width:480px){
+
+.logo{
+    font-size:28px;
+}
+
+.frame h2{
+    font-size:28px;
+}
+
+.camera-box{
+    height:210px;
+}
+
+.camera-info{
+    grid-template-columns:1fr;
+}
+
+.capture{
+    width:60px;
+    height:60px;
+    font-size:22px;
+}
+
+}
